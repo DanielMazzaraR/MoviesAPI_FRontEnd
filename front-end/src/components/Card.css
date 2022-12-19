@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+ body {
+	 margin: 0;
+	 padding: 0;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 font-family: "Righteous", cursive;
+	 min-height: 100vh;
+}
+ body .container {
+	 max-width: 100vw;
+	 display: grid;
+	 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	 grid-gap: 10px;
+	 margin: 0 auto;
+	 padding: 40px 0;
+}
+ body .container .card {
+	 position: relative;
+	 width: 300px;
+	 height: 400px;
+	 margin: 0 auto;
+	 background: #A3B18A;
+	 border-radius: 15px;
+	 box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+ body .container .card .face {
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ body .container .card .face.face1 {
+	 box-sizing: border-box;
+	 padding: 20px;
+}
+
+body .container .card .face.face1 p {
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 12px;
+    margin: 0px;
+    padding: 1px;
+}
+ body .container .card .face.face1 h2 {
+	 margin: 0;
+	 padding: 0;
+}
+ body .container .card .face.face2 {
+	 transition: 0.5s;
+     background-size: 100%;
+    border-radius: 12px;
+}
+ body .container .card .face.face2 h2 {
+	 margin: 0;
+	 padding: 0;
+	 font-size: 20px;
+	 color: #fff;
+	 transition: 0.5s;
+	 text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	 z-index: 10;
+}
+ body .container .card:hover .face.face2 {
+	 height: 60px;
+}
+ body .container .card:hover .face.face2 h2 {
+	 font-size: 5px;
+}
+
+
+ 
