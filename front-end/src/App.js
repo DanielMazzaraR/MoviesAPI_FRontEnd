@@ -10,24 +10,26 @@ function App() {
   const title = useRef();
 
   const prevBtnHandler = (event) => {
-    if(currentPage == 1){
+    if(currentPage === 1){
       setCurrentPage(currentPage)
     }
     else{
       setCurrentPage(currentPage - 1);
     }
-    focusTop();
+    scrollToTop();
   }
 
   const nextPageHandler = (event) => {
     setCurrentPage(currentPage + 1);
-    focusTop();
+    scrollToTop();
   }
 
-  const focusTop = () => {
-    title.current.focus();
-  }
-
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
   useEffect(() => {
     axios
       .get(
